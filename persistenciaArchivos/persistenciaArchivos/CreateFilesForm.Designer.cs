@@ -93,7 +93,7 @@
             this.ChequesDataGridView.Location = new System.Drawing.Point(257, 81);
             this.ChequesDataGridView.Name = "ChequesDataGridView";
             this.ChequesDataGridView.ReadOnly = true;
-            this.ChequesDataGridView.Size = new System.Drawing.Size(854, 334);
+            this.ChequesDataGridView.Size = new System.Drawing.Size(929, 334);
             this.ChequesDataGridView.TabIndex = 2;
             // 
             // CerrarButton
@@ -379,6 +379,7 @@
             this.buttonAgregar.TabIndex = 17;
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.UseVisualStyleBackColor = true;
+            this.buttonAgregar.Click += new System.EventHandler(this.ButtonAgregar_Click);
             // 
             // NombreColumn
             // 
@@ -439,7 +440,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1123, 509);
+            this.ClientSize = new System.Drawing.Size(1198, 509);
             this.Controls.Add(this.buttonAgregar);
             this.Controls.Add(this.InformacionRutaLabel);
             this.Controls.Add(this.BorrarRenglonButton);

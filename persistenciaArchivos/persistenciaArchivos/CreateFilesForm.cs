@@ -208,6 +208,11 @@ namespace persistenciaArchivos
                     Nombre = ChequesDataGridView.Rows[rowIndex].Cells[0].Value.ToString(),
                     Numero = ChequesDataGridView.Rows[rowIndex].Cells[1].Value.ToString(),
                     Monto = Convert.ToDouble(ChequesDataGridView.Rows[rowIndex].Cells[2].Value.ToString()),
+                    InstitucionFinanciera = ChequesDataGridView.Rows[rowIndex].Cells[8].Value.ToString(),
+                    Emisor = ChequesDataGridView.Rows[rowIndex].Cells[4].Value.ToString(),
+                    Receptor = ChequesDataGridView.Rows[rowIndex].Cells[5].Value.ToString(),
+                    Fecha = Convert.ToDateTime(ChequesDataGridView.Rows[rowIndex].Cells[6].Value.ToString()),
+                    Moneda = ChequesDataGridView.Rows[rowIndex].Cells[7].Value.ToString(),
 
                     Descripcion = descripcionEncriptada,
                 });
@@ -227,5 +232,9 @@ namespace persistenciaArchivos
             }
         }
 
+        private void ButtonAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
