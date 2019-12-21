@@ -16,5 +16,6 @@ namespace UNA.Cheques
         public string Receptor { get; set; }
         public string InstitucionFinanciera { get; set; }
         public string Moneda { get; set; }
+        public DateTime fecha { get; set; }
     }
 }

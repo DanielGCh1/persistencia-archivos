@@ -34,10 +34,14 @@ namespace persistenciaArchivos
 
         private void LimpiarInterfaz()
         {
+            
             NombreTextBox.Text = "";
             NumeroChequeTextBox.Text = "";
             MontoTextBox.Text = "";
             DescripcionTextBox.Text = "";
+            TextBoxEmisor.Text = "";
+            TextBoxReceptor.Text = "";
+            DateTimePickerFecha.Value = DateTime.Now ;
         }
 
         private void AgregarButton_Click(object sender, EventArgs e)
@@ -45,7 +49,7 @@ namespace persistenciaArchivos
             if (InformacionEsValida())
             {
                 Cheque cheque = RellenarCheque();
-                ChequesDataGridView.Rows.Add(cheque.Nombre, cheque.Numero, cheque.Monto, cheque.Descripcion);
+                ChequesDataGridView.Rows.Add(cheque.Nombre, cheque.Numero, cheque.Monto, cheque.Descripcion, cheque.Emisor, cheque.Receptor); // falta
             }
 
         }
@@ -75,6 +79,21 @@ namespace persistenciaArchivos
                 esValida = false;
                 ErrorProvider.SetError(DescripcionTextBox, "Debe especificar una Descripción de más de 10 caracteres");
             }
+            if (TextBoxEmisor.Text.Length < 2)
+            {
+                esValida = false;
+                ErrorProvider.SetError(TextBoxEmisor, "Debe especificar una Descripción de más de 2 caracteres");
+            }
+            if (TextBoxReceptor.Text.Length < 2)
+            {
+                esValida = false;
+                ErrorProvider.SetError(TextBoxReceptor, "Debe especificar una Descripción de más de 2 caracteres");
+            }
+            if (DateTimePickerFecha.Value > DateTime.Now)
+            {
+                esValida = false;
+                ErrorProvider.SetError(DateTimePickerFecha, "Debe especificar una fecha no mayor al dia de hoy");
+            }
             return esValida;
         }
 
@@ -91,6 +110,9 @@ namespace persistenciaArchivos
                 Numero = NumeroChequeTextBox.Text,
                 Monto = Convert.ToDouble(MontoTextBox.Text),
                 Descripcion = DescripcionTextBox.Text,
+                Emisor = TextBoxEmisor.Text,
+                Receptor = TextBoxReceptor.Text
+                
             };
         }
 
@@ -160,6 +182,8 @@ namespace persistenciaArchivos
             ErrorProvider.SetError(NumeroChequeTextBox, "");
             ErrorProvider.SetError(MontoTextBox, "");
             ErrorProvider.SetError(DescripcionTextBox, "");
+            ErrorProvider.SetError(TextBoxEmisor, "");
+            ErrorProvider.SetError(TextBoxReceptor, "");
 
             ErrorProvider.SetError(ChequesDataGridView, "");
             InformationProvider.SetError(CrearArchivoButton, "");

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlDeCheques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlDeCheques.Designer.cs">
+      <DependentUpon>ControlDeCheques.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateFilesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     <Compile Include="UNA\Cheques\Cheque.cs" />
     <Compile Include="UNA\Cheques\ArchivoManager.cs" />
     <Compile Include="UNA\Cheques\Encriptacion.cs" />
+    <EmbeddedResource Include="ControlDeCheques.resx">
+      <DependentUpon>ControlDeCheques.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateFilesForm.resx">
       <DependentUpon>CreateFilesForm.cs</DependentUpon>
     </EmbeddedResource>

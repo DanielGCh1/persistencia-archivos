@@ -17,3 +17,4 @@ C:\Users\116620380\Documents\GitHub\persistencia-archivos\persistenciaArchivos\p
 C:\Users\116620380\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.csproj.CoreCompileInputs.cache
 C:\Users\116620380\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.exe
 C:\Users\116620380\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.pdb
+C:\Users\116620380\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.ControlDeCheques.resources
