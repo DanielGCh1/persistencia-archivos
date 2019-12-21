@@ -35,6 +35,8 @@
             this.CrearArchivoButton = new System.Windows.Forms.Button();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.UpsertPanel = new System.Windows.Forms.Panel();
+            this.DateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
+            this.LabelFecha = new System.Windows.Forms.Label();
             this.ComboBoxMoneda = new System.Windows.Forms.ComboBox();
             this.LabelMoneda = new System.Windows.Forms.Label();
             this.ComboBoxInstitucionFinanciera = new System.Windows.Forms.ComboBox();
@@ -59,15 +61,14 @@
             this.InformationProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.NombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Emisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Receptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InstitucionFinanciera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroChequeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LabelFecha = new System.Windows.Forms.Label();
-            this.DateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
+            this.Emisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Receptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InstitucionFinanciera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ChequesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.UpsertPanel.SuspendLayout();
@@ -81,13 +82,14 @@
             this.ChequesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ChequesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreColumn,
-            this.Emisor,
-            this.Receptor,
-            this.InstitucionFinanciera,
             this.NumeroChequeColumn,
             this.MontoColumn,
+            this.DescripcionColumn,
+            this.Emisor,
+            this.Receptor,
+            this.Fecha,
             this.Moneda,
-            this.DescripcionColumn});
+            this.InstitucionFinanciera});
             this.ChequesDataGridView.Location = new System.Drawing.Point(257, 81);
             this.ChequesDataGridView.Name = "ChequesDataGridView";
             this.ChequesDataGridView.ReadOnly = true;
@@ -149,9 +151,30 @@
             this.UpsertPanel.Size = new System.Drawing.Size(251, 513);
             this.UpsertPanel.TabIndex = 12;
             // 
+            // DateTimePickerFecha
+            // 
+            this.DateTimePickerFecha.Location = new System.Drawing.Point(21, 317);
+            this.DateTimePickerFecha.Name = "DateTimePickerFecha";
+            this.DateTimePickerFecha.Size = new System.Drawing.Size(200, 20);
+            this.DateTimePickerFecha.TabIndex = 29;
+            // 
+            // LabelFecha
+            // 
+            this.LabelFecha.AutoSize = true;
+            this.LabelFecha.ForeColor = System.Drawing.Color.White;
+            this.LabelFecha.Location = new System.Drawing.Point(18, 289);
+            this.LabelFecha.Name = "LabelFecha";
+            this.LabelFecha.Size = new System.Drawing.Size(83, 13);
+            this.LabelFecha.TabIndex = 28;
+            this.LabelFecha.Text = "Ingrese la fecha";
+            // 
             // ComboBoxMoneda
             // 
             this.ComboBoxMoneda.FormattingEnabled = true;
+            this.ComboBoxMoneda.Items.AddRange(new object[] {
+            "$",
+            "€",
+            "₡"});
             this.ComboBoxMoneda.Location = new System.Drawing.Point(21, 265);
             this.ComboBoxMoneda.Name = "ComboBoxMoneda";
             this.ComboBoxMoneda.Size = new System.Drawing.Size(121, 21);
@@ -363,24 +386,6 @@
             this.NombreColumn.Name = "NombreColumn";
             this.NombreColumn.ReadOnly = true;
             // 
-            // Emisor
-            // 
-            this.Emisor.HeaderText = "Emisor";
-            this.Emisor.Name = "Emisor";
-            this.Emisor.ReadOnly = true;
-            // 
-            // Receptor
-            // 
-            this.Receptor.HeaderText = "Receptor";
-            this.Receptor.Name = "Receptor";
-            this.Receptor.ReadOnly = true;
-            // 
-            // InstitucionFinanciera
-            // 
-            this.InstitucionFinanciera.HeaderText = "Institucion Financiera";
-            this.InstitucionFinanciera.Name = "InstitucionFinanciera";
-            this.InstitucionFinanciera.ReadOnly = true;
-            // 
             // NumeroChequeColumn
             // 
             this.NumeroChequeColumn.HeaderText = "Número Cheque";
@@ -393,34 +398,41 @@
             this.MontoColumn.Name = "MontoColumn";
             this.MontoColumn.ReadOnly = true;
             // 
-            // Moneda
-            // 
-            this.Moneda.HeaderText = "Moneda";
-            this.Moneda.Name = "Moneda";
-            this.Moneda.ReadOnly = true;
-            // 
             // DescripcionColumn
             // 
             this.DescripcionColumn.HeaderText = "Descripción";
             this.DescripcionColumn.Name = "DescripcionColumn";
             this.DescripcionColumn.ReadOnly = true;
             // 
-            // LabelFecha
+            // Emisor
             // 
-            this.LabelFecha.AutoSize = true;
-            this.LabelFecha.ForeColor = System.Drawing.Color.White;
-            this.LabelFecha.Location = new System.Drawing.Point(18, 289);
-            this.LabelFecha.Name = "LabelFecha";
-            this.LabelFecha.Size = new System.Drawing.Size(83, 13);
-            this.LabelFecha.TabIndex = 28;
-            this.LabelFecha.Text = "Ingrese la fecha";
+            this.Emisor.HeaderText = "Emisor";
+            this.Emisor.Name = "Emisor";
+            this.Emisor.ReadOnly = true;
             // 
-            // DateTimePickerFecha
+            // Receptor
             // 
-            this.DateTimePickerFecha.Location = new System.Drawing.Point(21, 317);
-            this.DateTimePickerFecha.Name = "DateTimePickerFecha";
-            this.DateTimePickerFecha.Size = new System.Drawing.Size(200, 20);
-            this.DateTimePickerFecha.TabIndex = 29;
+            this.Receptor.HeaderText = "Receptor";
+            this.Receptor.Name = "Receptor";
+            this.Receptor.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Moneda
+            // 
+            this.Moneda.HeaderText = "Moneda";
+            this.Moneda.Name = "Moneda";
+            this.Moneda.ReadOnly = true;
+            // 
+            // InstitucionFinanciera
+            // 
+            this.InstitucionFinanciera.HeaderText = "Institucion Financiera";
+            this.InstitucionFinanciera.Name = "InstitucionFinanciera";
+            this.InstitucionFinanciera.ReadOnly = true;
             // 
             // CreateFilesForm
             // 
@@ -480,16 +492,17 @@
         private System.Windows.Forms.ComboBox ComboBoxMoneda;
         private System.Windows.Forms.Label LabelMoneda;
         private System.Windows.Forms.Button buttonAgregar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Emisor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Receptor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InstitucionFinanciera;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroChequeColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MontoColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionColumn;
         private System.Windows.Forms.Label LabelFecha;
         private System.Windows.Forms.DateTimePicker DateTimePickerFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroChequeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MontoColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emisor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Receptor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InstitucionFinanciera;
     }
 }
 

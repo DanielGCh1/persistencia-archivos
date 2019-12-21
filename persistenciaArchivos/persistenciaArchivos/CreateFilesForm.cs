@@ -20,6 +20,8 @@ namespace persistenciaArchivos
         public CreateFilesForm()
         {
             InitializeComponent();
+            ComboBoxInstitucionFinanciera.SelectedIndex = 0;
+            ComboBoxMoneda.SelectedIndex = 0;
         }
 
         private void CreateFilesForm_Load(object sender, EventArgs e)
@@ -42,6 +44,8 @@ namespace persistenciaArchivos
             TextBoxEmisor.Text = "";
             TextBoxReceptor.Text = "";
             DateTimePickerFecha.Value = DateTime.Now ;
+            ComboBoxInstitucionFinanciera.SelectedIndex = 0;
+            ComboBoxMoneda.SelectedIndex = 0;
         }
 
         private void AgregarButton_Click(object sender, EventArgs e)
@@ -49,7 +53,7 @@ namespace persistenciaArchivos
             if (InformacionEsValida())
             {
                 Cheque cheque = RellenarCheque();
-                ChequesDataGridView.Rows.Add(cheque.Nombre, cheque.Numero, cheque.Monto, cheque.Descripcion, cheque.Emisor, cheque.Receptor); // falta
+                ChequesDataGridView.Rows.Add(cheque.Nombre, cheque.Numero, cheque.Monto, cheque.Descripcion, cheque.Emisor, cheque.Receptor, cheque.Fecha, cheque.Moneda, cheque.InstitucionFinanciera); // falta
             }
 
         }
@@ -111,8 +115,10 @@ namespace persistenciaArchivos
                 Monto = Convert.ToDouble(MontoTextBox.Text),
                 Descripcion = DescripcionTextBox.Text,
                 Emisor = TextBoxEmisor.Text,
-                Receptor = TextBoxReceptor.Text
-                
+                Receptor = TextBoxReceptor.Text,
+                InstitucionFinanciera = ComboBoxInstitucionFinanciera.Text,
+                Moneda = ComboBoxMoneda.Text,
+                Fecha = DateTimePickerFecha.Value
             };
         }
 
@@ -132,7 +138,7 @@ namespace persistenciaArchivos
             if (HayInformacionEnLaGrid())
             {
                 LimpiarErrorProviders();
-                ChequesDataGridView.Rows.RemoveAt(ChequesDataGridView.Rows.Count - 1);
+                ChequesDataGridView.Rows.RemoveAt(ChequesDataGridView.Rows.Count - 1); // para que el - 1 ?
             }
             else
             {
@@ -202,6 +208,7 @@ namespace persistenciaArchivos
                     Nombre = ChequesDataGridView.Rows[rowIndex].Cells[0].Value.ToString(),
                     Numero = ChequesDataGridView.Rows[rowIndex].Cells[1].Value.ToString(),
                     Monto = Convert.ToDouble(ChequesDataGridView.Rows[rowIndex].Cells[2].Value.ToString()),
+
                     Descripcion = descripcionEncriptada,
                 });
             }
