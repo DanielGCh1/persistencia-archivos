@@ -234,7 +234,9 @@ namespace persistenciaArchivos
 
         private void ButtonAgregar_Click(object sender, EventArgs e)
         {
-
+            ControlDeCheques controlDeCheques = new ControlDeCheques();
+         //   controlDeCheques.Show(); // Llama la vista
+            controlDeCheques.ShowDialog(); // LLama la nueva vista, pero bloquea la ventana de abajo
         }
     }
 }

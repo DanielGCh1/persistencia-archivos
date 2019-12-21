@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UNA.Cheques
 {
-    class Cheque
+    public class Cheque
     {
         public string Nombre { get; set; }
         public string Numero { get; set; }

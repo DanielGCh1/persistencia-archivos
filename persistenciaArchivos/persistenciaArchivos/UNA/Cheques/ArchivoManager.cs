@@ -8,10 +8,11 @@ using UNA.Cheques;
 
 namespace persistenciaArchivos.UNA.Cheques
 {
-    class ArchivoManager
+    public class ArchivoManager
     {
          
         public List<Cheque> ChequesList { get; set; }
+
         public ArchivoManager()
         {
             ChequesList = new List<Cheque>();
@@ -31,7 +32,45 @@ namespace persistenciaArchivos.UNA.Cheques
                 return path;
             }
         }
-        public void LeerArchivo() {
+        public void CargarCheques(String contraseña) {
+            
+                String[] nombreDeArquivos =  Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory,"*.csv");
+
+                for (int i = 0; i < nombreDeArquivos.Length ; i++ )
+                {
+                    using (StreamReader readerFile = new StreamReader(nombreDeArquivos[i]))
+                    {
+                        string linea;
+                        string[] renglon;
+
+                        while ((linea = readerFile.ReadLine()) != null)
+                        {
+                            renglon = linea.Split(',');
+
+                            //try
+                            //{
+                                Cheque cheque = new Cheque
+                                {
+                                    Nombre = renglon[0],
+                                    Numero = renglon[1],
+                                    Monto = Convert.ToDouble(renglon[2]),
+                                    Descripcion = Encriptacion.DesencriptarString(renglon[3], contraseña),
+                                    Emisor = renglon[4],
+                                    Receptor = renglon[5],
+                                    InstitucionFinanciera = renglon[8],
+                                    Moneda = renglon[7],
+                                    Fecha = Convert.ToDateTime(renglon[6])
+                                };
+                                ChequesList.Add(cheque);
+                            //}
+                            //catch(Exception)
+                            //{
+
+                            //}
+                        }
+                    }
+                }
+            
         }
     }
 }

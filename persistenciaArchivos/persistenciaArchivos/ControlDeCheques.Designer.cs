@@ -32,13 +32,14 @@
             this.ButtonRefrescar = new System.Windows.Forms.Button();
             this.ChequesDataGridView = new System.Windows.Forms.DataGridView();
             this.NombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Emisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Receptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InstitucionFinanciera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroChequeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Receptor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InstitucionFinanciera = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ChequesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +61,7 @@
             this.ButtonRefrescar.TabIndex = 5;
             this.ButtonRefrescar.Text = "Refrescar";
             this.ButtonRefrescar.UseVisualStyleBackColor = true;
+            this.ButtonRefrescar.Click += new System.EventHandler(this.ButtonRefrescar_Click);
             // 
             // ChequesDataGridView
             // 
@@ -68,17 +70,18 @@
             this.ChequesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ChequesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreColumn,
-            this.Emisor,
-            this.Receptor,
-            this.InstitucionFinanciera,
             this.NumeroChequeColumn,
             this.MontoColumn,
+            this.DescripcionColumn,
+            this.Emisor,
+            this.Receptor,
+            this.Fecha,
             this.Moneda,
-            this.DescripcionColumn});
-            this.ChequesDataGridView.Location = new System.Drawing.Point(79, 68);
+            this.InstitucionFinanciera});
+            this.ChequesDataGridView.Location = new System.Drawing.Point(48, 58);
             this.ChequesDataGridView.Name = "ChequesDataGridView";
             this.ChequesDataGridView.ReadOnly = true;
-            this.ChequesDataGridView.Size = new System.Drawing.Size(854, 334);
+            this.ChequesDataGridView.Size = new System.Drawing.Size(929, 334);
             this.ChequesDataGridView.TabIndex = 6;
             // 
             // NombreColumn
@@ -86,24 +89,6 @@
             this.NombreColumn.HeaderText = "Nombre";
             this.NombreColumn.Name = "NombreColumn";
             this.NombreColumn.ReadOnly = true;
-            // 
-            // Emisor
-            // 
-            this.Emisor.HeaderText = "Emisor";
-            this.Emisor.Name = "Emisor";
-            this.Emisor.ReadOnly = true;
-            // 
-            // Receptor
-            // 
-            this.Receptor.HeaderText = "Receptor";
-            this.Receptor.Name = "Receptor";
-            this.Receptor.ReadOnly = true;
-            // 
-            // InstitucionFinanciera
-            // 
-            this.InstitucionFinanciera.HeaderText = "Institucion Financiera";
-            this.InstitucionFinanciera.Name = "InstitucionFinanciera";
-            this.InstitucionFinanciera.ReadOnly = true;
             // 
             // NumeroChequeColumn
             // 
@@ -117,17 +102,41 @@
             this.MontoColumn.Name = "MontoColumn";
             this.MontoColumn.ReadOnly = true;
             // 
+            // DescripcionColumn
+            // 
+            this.DescripcionColumn.HeaderText = "Descripción";
+            this.DescripcionColumn.Name = "DescripcionColumn";
+            this.DescripcionColumn.ReadOnly = true;
+            // 
+            // Emisor
+            // 
+            this.Emisor.HeaderText = "Emisor";
+            this.Emisor.Name = "Emisor";
+            this.Emisor.ReadOnly = true;
+            // 
+            // Receptor
+            // 
+            this.Receptor.HeaderText = "Receptor";
+            this.Receptor.Name = "Receptor";
+            this.Receptor.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
             // Moneda
             // 
             this.Moneda.HeaderText = "Moneda";
             this.Moneda.Name = "Moneda";
             this.Moneda.ReadOnly = true;
             // 
-            // DescripcionColumn
+            // InstitucionFinanciera
             // 
-            this.DescripcionColumn.HeaderText = "Descripción";
-            this.DescripcionColumn.Name = "DescripcionColumn";
-            this.DescripcionColumn.ReadOnly = true;
+            this.InstitucionFinanciera.HeaderText = "Institucion Financiera";
+            this.InstitucionFinanciera.Name = "InstitucionFinanciera";
+            this.InstitucionFinanciera.ReadOnly = true;
             // 
             // ControlDeCheques
             // 
@@ -150,12 +159,13 @@
         private System.Windows.Forms.Button ButtonRefrescar;
         private System.Windows.Forms.DataGridView ChequesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Emisor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Receptor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InstitucionFinanciera;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumeroChequeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emisor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Receptor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InstitucionFinanciera;
     }
 }

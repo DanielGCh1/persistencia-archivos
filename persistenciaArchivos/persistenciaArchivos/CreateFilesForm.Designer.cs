@@ -373,11 +373,11 @@
             // 
             // buttonAgregar
             // 
-            this.buttonAgregar.Location = new System.Drawing.Point(532, 430);
+            this.buttonAgregar.Location = new System.Drawing.Point(512, 430);
             this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(85, 23);
+            this.buttonAgregar.Size = new System.Drawing.Size(119, 23);
             this.buttonAgregar.TabIndex = 17;
-            this.buttonAgregar.Text = "Agregar";
+            this.buttonAgregar.Text = "Mostrar Cheques...";
             this.buttonAgregar.UseVisualStyleBackColor = true;
             this.buttonAgregar.Click += new System.EventHandler(this.ButtonAgregar_Click);
             // 
