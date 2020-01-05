@@ -18,3 +18,13 @@ C:\Users\116620380\Documents\GitHub\persistencia-archivos\persistenciaArchivos\p
 C:\Users\116620380\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.exe
 C:\Users\116620380\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.pdb
 C:\Users\116620380\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.ControlDeCheques.resources
+C:\Users\dgcha\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\bin\Debug\persistenciaArchivos.exe.config
+C:\Users\dgcha\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\bin\Debug\persistenciaArchivos.exe
+C:\Users\dgcha\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\bin\Debug\persistenciaArchivos.pdb
+C:\Users\dgcha\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.csprojAssemblyReference.cache
+C:\Users\dgcha\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.ControlDeCheques.resources
+C:\Users\dgcha\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.CreateFilesForm.resources
+C:\Users\dgcha\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.Properties.Resources.resources
+C:\Users\dgcha\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.csproj.GenerateResource.cache
+C:\Users\dgcha\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.exe
+C:\Users\dgcha\Documents\GitHub\persistencia-archivos\persistenciaArchivos\persistenciaArchivos\obj\Debug\persistenciaArchivos.pdb
